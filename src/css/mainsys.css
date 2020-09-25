@@ -1,0 +1,114 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.grad1{
+   -fx-background-color: radial-gradient(focus-distance 0% , center 50% 50% , radius 55% , #007002, #001200);
+}
+
+.grad2{
+   -fx-background-color: radial-gradient(focus-distance -59% , center 50% 50% , radius 55% , #7cfc00, #ff0000);
+}
+
+.grad3{
+   -fx-background-color: radial-gradient(focus-distance -100% , center 50% 50% , radius 55% , #7cfc00, #ff0000);
+}
+.linear-grad2{
+   -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #001200, #001200);
+}
+.tab-pane .tab-header-area .tab-header-background {
+    /*-fx-background-color:#5E35B1;*/
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+.tab-pane .tab
+{
+    -fx-background-color:  radial-gradient(focus-distance -59% , center 50% 50% , radius 55% , #102210, #ff0000);
+ -fx-background-radius:3000 3000 0 0;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color:  radial-gradient(focus-distance -59% , center 50% 50% , radius 55% , #102210, #ff0000);
+
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill:  #FFFFFF;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill:  #FFFFFF;
+}
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 20;
+   -fx-background-color: radial-gradient(focus-distance 0% , center 50% 50% , radius 55% , #007002, #001200);
+
+}
+.table-view .column-header .label{
+
+   -fx-text-fill: white;
+   -fx-font-weight: bold;
+   -fx-alignment: CENTER_LEFT;
+}
+.table-view .cell{
+   -fx-cell-size: 30;
+  -fx-alignment: center-left;
+  -fx-text-fill: #7CFC00;
+  -fx-alignment: CENTER_LEFT;
+}
+.table-view{
+         -fx-background-color: radial-gradient(focus-distance 0% , center 50% 50% , radius 55% , #007002, #001200);
+}
+.table-row-cell {
+    -fx-background-color:radial-gradient(focus-distance 0% , center 50% 50% , radius 55% , #007002, #001200);
+ -fx-fill : #7CFC00 ;
+        -fx-border-color:radial-gradient(focus-distance -59% , center 50% 50% , radius 55% , #7cfc00, #ff0000);
+
+ }
+.table-row-cell:selected {
+    -fx-background-color:radial-gradient(focus-distance 0% , center 50% 50% , radius 55% , #102210, #001200);
+ }
+ .table-row-cell:selected .text {
+        -fx-fill : white ;
+ 
+ }
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+	-fx-background-radius: 2em;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+	-fx-background-color: transparent;
+	-fx-border-color:derive(   #0F4C10,80%);
+	-fx-background-radius: 2em;
+	-fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(  #0F4C10,90%);
+	-fx-background-insets: 2, 0, 0;
+	-fx-background-radius: 2em;
+}

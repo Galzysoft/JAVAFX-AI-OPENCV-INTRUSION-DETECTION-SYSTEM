@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="521.0" prefWidth="943.0" style="-fx-border-radius: 20 0 0 56; -fx-border-width: 10;" styleClass="grad1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LOGINController">
+     <stylesheets>
+        <URL value="@/css/mainsys.css" />
+    </stylesheets>
+    <children>
+      <HBox prefHeight="511.0" prefWidth="810.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="10.0" maxWidth="-Infinity" prefHeight="511.0" prefWidth="380.0" style="-fx-background-radius: 20 0 0 56;" styleClass="linear-grad2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="562.0" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <ImageView fitHeight="227.0" fitWidth="248.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="55.50813293457031">
+                           <image>
+                              <Image url="@../image/r2s.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="search" fitHeight="227.0" fitWidth="292.0" layoutX="10.0" layoutY="10.0" opacity="0.21" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="55.50813293457031" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../image/icon.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Text fx:id="textyy" fill="#ff0202" strokeType="OUTSIDE" strokeWidth="0.0" text="Wait while Intrusion Detection is Initialized ...." wrappingWidth="314.970703125">
+                     <font>
+                        <Font name="Bauhaus 93" size="15.0" />
+                     </font>
+                  </Text>
+                  <HBox fx:id="threat" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="63.0" prefWidth="241.0" style="-fx-background-radius: 3000;" visible="false">
+                     <children>
+                        <Text fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Threat Detcted !!" wrappingWidth="127.798828125" />
+                        <ImageView fitHeight="45.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Warning%20Shield_96px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <effect>
+                        <DropShadow color="#ee1515" height="182.6" radius="71.8975" spread="0.8" width="106.99" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <TabPane HBox.hgrow="ALWAYS">
+               <tabs>
+                  <Tab closable="false" text="Login">
+                     <content>
+                        <VBox alignment="CENTER" layoutX="338.0" layoutY="47.0" prefHeight="511.0" prefWidth="395.0" spacing="35.0" style="-fx-border-color: radial-gradient(focus-distance -100% , center 50% 50% , radius 55% , #7cfc00, #ff0000); -fx-border-radius: 56 0 0 56;" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="338.0" AnchorPane.rightAnchor="163.0" AnchorPane.topAnchor="47.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <JFXTextField fx:id="username" focusColor="#50e146" labelFloat="true" promptText="Username" style="-fx-text-inner-color: white; -fx-prompt-text-fill: white;" unFocusColor="#bf1704" />
+                              <JFXPasswordField fx:id="pass" focusColor="#50e146" labelFloat="true" layoutX="10.0" layoutY="60.0" onAction="#gin" promptText="Passwrd" style="-fx-prompt-text-fill: white; -fx-text-inner-color: white;" unFocusColor="#bf1704" />
+                              <VBox alignment="CENTER" prefHeight="111.0" prefWidth="298.0">
+                                 <children>
+                                    <JFXButton onAction="#gin" prefHeight="37.0" prefWidth="217.0" styleClass="grad2" text="Login" textFill="#061e01" />
+                                 </children>
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </VBox>
+                              <ImageView fx:id="picture" fitHeight="1.0" fitWidth="1.0" pickOnBounds="true" preserveRatio="true" />
+                              <Text fx:id="te" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="8.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow height="62.51" radius="35.2025" spread="0.45" width="80.3" />
+                           </effect>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="88.0" right="88.0" top="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </content>
+                  </Tab>
+                  <Tab closable="false" text="Sign Up">
+                     <content>
+                        <VBox alignment="CENTER" layoutX="338.0" layoutY="47.0" prefHeight="511.0" prefWidth="395.0" spacing="35.0" style="-fx-border-color: radial-gradient(focus-distance -100% , center 50% 50% , radius 55% , #7cfc00, #ff0000); -fx-border-radius: 20 0 0 56;" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="338.0" AnchorPane.rightAnchor="163.0" AnchorPane.topAnchor="47.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <JFXTextField fx:id="username1" focusColor="#50e146" labelFloat="true" promptText="Enter Username" style="-fx-text-inner-color: white; -fx-prompt-text-fill: white;" unFocusColor="#bf1704" />
+                              <JFXTextField fx:id="emai1" focusColor="#50e146" labelFloat="true" layoutX="10.0" layoutY="10.0" promptText="Enter Email" style="-fx-text-inner-color: white; -fx-prompt-text-fill: white;" unFocusColor="#bf1704" />
+                              <JFXPasswordField fx:id="pass1" focusColor="#50e146" labelFloat="true" promptText="Enter Passwrd" style="-fx-prompt-text-fill: white; -fx-text-inner-color: white;" unFocusColor="#bf1704" />
+                              <JFXPasswordField fx:id="retyupe1" focusColor="#50e146" labelFloat="true" layoutX="10.0" layoutY="60.0" onAction="#gin" promptText="Retype Passwrd" style="-fx-prompt-text-fill: white; -fx-text-inner-color: white;" unFocusColor="#bf1704" />
+                              <VBox alignment="CENTER" prefHeight="111.0" prefWidth="298.0">
+                                 <children>
+                                    <JFXButton onAction="#signup" prefHeight="37.0" prefWidth="217.0" styleClass="grad2" text="Sign up" textFill="#061e01" />
+                                 </children>
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </VBox>
+                           </children>
+                           <effect>
+                              <DropShadow height="62.51" radius="35.2025" spread="0.45" width="80.3" />
+                           </effect>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="8.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="88.0" right="88.0" top="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="63.0" prefWidth="134.0" style="-fx-background-color: red; -fx-background-radius: 20 0 0 56;">
+               <children>
+                  <Text fill="#ebe4e4" strokeType="OUTSIDE" strokeWidth="0.0" text="Galzy Soft" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+   <effect>
+      <Lighting>
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+         <light>
+            <Light.Distant />
+         </light>
+      </Lighting>
+   </effect>
+</AnchorPane>

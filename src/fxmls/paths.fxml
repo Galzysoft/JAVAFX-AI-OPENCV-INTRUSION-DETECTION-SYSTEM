@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="298.0" prefWidth="647.0" spacing="19.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: black; -fx-border-width: 8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PathsController">
+   <children>
+      <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" prefHeight="27.0" prefWidth="647.0" VBox.vgrow="ALWAYS">
+         <children>
+            <JFXButton onAction="#exitt" ripplerFill="#fc0a0a" style="-fx-border-color: red; -fx-border-radius: 200; -fx-background-color: black; -fx-background-radius: red;" text="  close" textFill="#eb0c0c" />
+         </children>
+      </HBox>
+      <Text fill="#d96924" strokeType="OUTSIDE" strokeWidth="0.0" text="App Setup" textAlignment="CENTER" underline="true" wrappingWidth="216.13671875">
+         <effect>
+            <Reflection />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <HBox layoutX="10.0" layoutY="64.0">
+         <children>
+            <JFXTextField fx:id="name1" focusColor="#d96924" labelFloat="true" prefHeight="27.0" prefWidth="501.0" promptText="xml path" style="-fx-text-inner-color: #D96924; -fx-prompt-text-fill: #D96924;" unFocusColor="#591207">
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </JFXTextField>
+            <JFXButton onAction="#uploadclickvp" prefHeight="27.0" prefWidth="261.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: #624748;" text="browse the Face Xml path" textFill="#f2f0f0" underline="true" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <JFXTextField fx:id="name" focusColor="#d96924" labelFloat="true" prefHeight="27.0" prefWidth="501.0" promptText="face detected image path" style="-fx-text-inner-color: #D96924; -fx-prompt-text-fill: #D96924;" unFocusColor="#591207">
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </JFXTextField>
+            <JFXButton onAction="#uploadclick" prefHeight="27.0" prefWidth="262.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: #624748;" text="browse the face detected path" textFill="#f2f0f0" underline="true" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="571.0" spacing="200.0" style="-fx-background-color: #496D64; -fx-background-radius: 20; -fx-background-radius: #496D64; -fx-border-radius: 20; -fx-border-color: #496D64; -fx-border-radius: 20; -fx-background-radius: 20;">
+         <children>
+            <JFXButton layoutX="10.0" layoutY="10.0" onAction="#update" prefHeight="27.0" prefWidth="96.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: #624748;" text="Save" textFill="#f2f0f0" underline="true" />
+            <JFXButton layoutX="108.0" layoutY="10.0" onAction="#clear" prefHeight="27.0" prefWidth="84.0" ripplerFill="#1f0068" style="-fx-background-radius: 20; -fx-border-color: white; -fx-border-width: 1; -fx-border-radius: 20; -fx-background-color: green;" text="Clear" textFill="#f2f0f0" underline="true" />
+         </children>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <padding>
+            <Insets left="10.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+   <effect>
+      <DropShadow radius="65.595" spread="0.26" width="243.38" />
+   </effect>
+</VBox>

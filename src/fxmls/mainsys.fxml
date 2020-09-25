@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="504.0" prefWidth="773.0" styleClass="grad1" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainsysController">
+ <stylesheets>
+        <URL value="@/css/mainsys.css" />
+    </stylesheets>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="grad1" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#ebdfdf" strokeType="OUTSIDE" strokeWidth="0.0" text="Centra Bank of Nigeria">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin></Text>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane>
+               <tabs>
+                  <Tab closable="false" text="View Intruders">
+                     <content>
+                        <HBox>
+                           <children>
+                              <VBox alignment="TOP_CENTER" layoutX="338.0" layoutY="47.0" prefHeight="511.0" prefWidth="395.0" spacing="35.0" style="-fx-border-color: radial-gradient(focus-distance -100% , center 50% 50% , radius 55% , #7cfc00, #ff0000); -fx-border-radius: 20 0 0 56;" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="338.0" AnchorPane.rightAnchor="163.0" AnchorPane.topAnchor="47.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <ImageView fx:id="hackimage" fitHeight="294.0" fitWidth="186.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/About%20Us%20Male_96px.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXTextField fx:id="hackttime" focusColor="#50e146" labelFloat="true" promptText="Time of Hack Attack" style="-fx-text-inner-color: white; -fx-prompt-text-fill: white;" unFocusColor="#bf1704" />
+                                 </children>
+                                 <effect>
+                                    <DropShadow height="62.51" radius="35.2025" spread="0.45" width="80.3" />
+                                 </effect>
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="8.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="38.0" right="88.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="98.0" layoutY="30.0" prefHeight="375.0" prefWidth="611.0" spacing="35.0" style="-fx-border-color: radial-gradient(focus-distance -100% , center 50% 50% , radius 55% , #7cfc00, #ff0000); -fx-border-radius: 20 0 0 56;">
+                                 <effect>
+                                    <DropShadow height="62.51" radius="35.2025" spread="0.45" width="80.3" />
+                                 </effect>
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="8.0" />
+                                 </padding>
+                                 <children>
+                                    <TableView fx:id="typehack" onMouseClicked="#selectedhack" onMouseEntered="#selectedhack" prefHeight="288.0" prefWidth="390.0">
+                                      <columns>
+                                        <TableColumn fx:id="CIMAGE" prefWidth="249.0" text="imagee" />
+                                        <TableColumn fx:id="CHACK" minWidth="0.0" prefWidth="134.0" text="time of hack" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </content>
+                  </Tab>
+                  <Tab closable="false" text="View All Users">
+                     <content>
+                        <HBox>
+                           <children>
+                              <VBox alignment="CENTER" layoutX="338.0" layoutY="47.0" prefHeight="511.0" prefWidth="395.0" spacing="35.0" style="-fx-border-color: radial-gradient(focus-distance -100% , center 50% 50% , radius 55% , #7cfc00, #ff0000); -fx-border-radius: 20 0 0 56;" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="338.0" AnchorPane.rightAnchor="163.0" AnchorPane.topAnchor="47.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <JFXTextField fx:id="username11" focusColor="#50e146" labelFloat="true" promptText="Enter Username" style="-fx-text-inner-color: white; -fx-prompt-text-fill: white;" unFocusColor="#bf1704" />
+                                    <JFXTextField fx:id="emai11" focusColor="#50e146" labelFloat="true" layoutX="10.0" layoutY="10.0" promptText="Enter Email" style="-fx-text-inner-color: white; -fx-prompt-text-fill: white;" unFocusColor="#bf1704" />
+                                 </children>
+                                 <effect>
+                                    <DropShadow height="62.51" radius="35.2025" spread="0.45" width="80.3" />
+                                 </effect>
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="8.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="38.0" right="88.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" layoutX="98.0" layoutY="30.0" prefHeight="375.0" prefWidth="611.0" spacing="35.0" style="-fx-border-color: radial-gradient(focus-distance -100% , center 50% 50% , radius 55% , #7cfc00, #ff0000); -fx-border-radius: 20 0 0 56;">
+                                 <children>
+                                    <TableView fx:id="typeuser" onMouseClicked="#selecteduser" onMouseEntered="#selecteduser" prefHeight="288.0" prefWidth="390.0">
+                                       <columns>
+                                          <TableColumn fx:id="Cusername" prefWidth="188.0" text="username" />
+                                          <TableColumn fx:id="cmai" prefWidth="201.0" text="email" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                                 <effect>
+                                    <DropShadow height="62.51" radius="35.2025" spread="0.45" width="80.3" />
+                                 </effect>
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="8.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </center>
+   <effect>
+      <Lighting>
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+         <light>
+            <Light.Distant />
+         </light>
+      </Lighting>
+   </effect>
+</BorderPane>
